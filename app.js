@@ -72,3 +72,15 @@ function multi(num1, num2){
 console.log(multi(2,1))
 let results = multiply(2,1);
 console.log(results);
+
+
+let laptop = {
+    cpu: '19',
+    ram:16,
+    brand: 'HP',
+
+    greet1: function(yess){
+        console.log('Hello World '+yess);
+    }
+}
+laptop.greet1('it works');
