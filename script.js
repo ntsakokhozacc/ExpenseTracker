@@ -77,3 +77,8 @@ function calc(type) {
 
 }
 
+function reset(){
+    transactions.length=0;
+    getResults();
+    displayTable();
+}
