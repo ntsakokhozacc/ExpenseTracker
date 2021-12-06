@@ -5,42 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheets" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="app">
+
         <h1>Expense tracker</h1>
 
-
         <input type="text" id="detail" placeholder="Detail">
-        <input type="text" id="amount" placeholder="Amount">
-        <div>
-            <button class="income" onclick="calcIncome">
-            + income
-            </button>
-            <button class="expense" onclick="calcExpense()">
-            - expense
-            </button>
-        </div>
+        <input type="number" id="amount" placeholder="Amount">
 
-        <table>
-            <thead>
-                <tr>
-                    <th>*</th>
-                    <th>Detail</th>
-                    <th>Amount</th>
-                </tr>
-            </thead>    
-            <tbody id="tableBody">
-            </tbody>
-        </table>
-        
-        <div class="total">
-            <h2>Total Income: <span class="incomeTotal">R6000</span></h2>
-            <h2>Total Expense:<span class="amountExpense">R6000</span ></h2></h2>
-            <h2>Total Income:<span class="amountTotal">R6000</span></h2></h2>
-        </div>
+       <div>
+        <button class="income" onclick="calc('Income')">
+           + INCOME
+        </button>
+        <button class="expense" onclick="calc('Expense')">
+           - EXPENCE
+        </button>
+        <br>
+        <div>
+        <button class="reset" onclick="reset()">
+            0 RESET
+         </button>
+       </div>
+
+
+       <table>
+           <thead>
+            <tr>
+                <th>*</th>
+                <th>Detail</th>
+                <th>Amount</th>
+            </tr>
+           </thead>
+           <tbody id="tableBody">
+          
+           </tbody>
+       </table>
+
+
+       <div class="total">
+        <h2>Total Income: <span class="incomeTotal" id="incomeTotal">R0<span></h2>
+            <h2>Total Expense: <span class="expenseTotal" id="expenseTotal">R0<span></h2>
+            <h2>Total Amount: <span class="amountTotal" id="amountTotal">R0<span></h2>
+       </div>
+
+       <a href="https://github.com/dylut2000/anything" target="blank">My github</a>
+     
     </div>
+
+
     <script src="./script.js"></script>
 </body>
 </html>
