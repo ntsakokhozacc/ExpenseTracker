@@ -45,3 +45,13 @@ button{
     border-radius: .5rem;
     
 }
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr,th{
+    border: solid 1px black;
+
+}

@@ -80,7 +80,7 @@ let laptop = {
     brand: 'HP',
 
     greet1: function(yess){
-        console.log('Hello World '+yess);
+        console.log(`Hello World ${yess}`);
     }
 }
 laptop.greet1('it works');
