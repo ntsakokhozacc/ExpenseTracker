@@ -63,9 +63,12 @@ console.log(result);
 
 // /////////////////////////////////
 //arrow functions in javascript
-let multiply = (num1,num2) => {
-    return num1*num2;
+let multiply = (num1,num2) =>  num1*num2;
+            
+function multi(num1, num2){
+    return 'Hello this is a test: '+num1*num2
 }
-let multiplication = multiply;
-result = multiplication(2,5);
-console.log(multiplication);
+
+console.log(multi(2,1))
+let results = multiply(2,1);
+console.log(results);
