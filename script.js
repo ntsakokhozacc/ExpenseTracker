@@ -8,6 +8,7 @@ let transactions = [];
 function getInputValues() {
   detail = document.getElementById("detail").value;
   amount = Number(document.getElementById("amount").value);
+  
 }
 
 // validate inputs
@@ -70,15 +71,41 @@ function calc(type) {
   if (!isValid()) return;
 
   transactions.push({ type, detail, amount })
+  store_data()
   getResults();
   displayTable();
-  document.getElementById("detail").value="";
+  document.getElementById("detail").value=null;
   Number(document.getElementById("amount").value=null);
 
 }
 
 function reset(){
     transactions.length=0;
+    localStorage.clear();
     getResults();
     displayTable();
+}
+
+function store_data(){
+  // localStorage.setItem("detail",detail);
+  // localStorage.setItem("amount",amount);
+  
+  // let trans = JSON.parse(transactions);
+  localStorage.setItem("myArray",JSON.stringify(transactions));
+  console.log(localStorage.myArray)
+  
+  // localStorage.clear();
+  // localStorage.removeItem()
+}
+
+function load(){
+  if (localStorage.getItem("myArray")){
+    let trans = JSON.parse(localStorage.getItem("myArray"));
+    getResults();
+    displayTable();
+  } 
+  else{
+    trans=[]
+  }
+
 }
