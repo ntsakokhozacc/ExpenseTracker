@@ -4,7 +4,11 @@ let amount;
 
 // holds all transactions
 let transactions = [];
+<<<<<<< HEAD
 document.body.onload=load();
+=======
+document.body.onload= load();
+>>>>>>> 742ab950c56d90b666faf7b6a0c1c2020a03b838
 
 // get values from inputs
 function getInputValues() {
@@ -110,12 +114,19 @@ function store_data(){
 function load(){
   if (localStorage.getItem("myArray")){
     transactions = JSON.parse(localStorage.getItem("myArray"));
+<<<<<<< HEAD
     console.log(transactions)
+=======
+>>>>>>> 742ab950c56d90b666faf7b6a0c1c2020a03b838
     getResults();
     displayTable();
   } 
   else{
+<<<<<<< HEAD
     transactions=[];
+=======
+    transactions=[]
+>>>>>>> 742ab950c56d90b666faf7b6a0c1c2020a03b838
   }
 
 }
