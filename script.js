@@ -1,8 +1,10 @@
 let detail;
 let amount;
 
+
 // holds all transactions
 let transactions = [];
+document.body.onload=load();
 
 // get values from inputs
 function getInputValues() {
@@ -100,12 +102,13 @@ function store_data(){
 
 function load(){
   if (localStorage.getItem("myArray")){
-    let trans = JSON.parse(localStorage.getItem("myArray"));
+    transactions = JSON.parse(localStorage.getItem("myArray"));
+    console.log(transactions)
     getResults();
     displayTable();
   } 
   else{
-    trans=[]
+    transactions=[]
   }
 
 }
