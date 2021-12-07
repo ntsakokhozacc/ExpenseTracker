@@ -63,7 +63,14 @@ function getResults () {
 
    incomeTotal.innerHTML = income;
    expenseTotal.innerHTML = expense;
-   amountTotal.innerHTML = income - expense;
+   if((income-expense)<0){
+     amountTotal.innerHTML = "Your expenses exceed your salary by R"+Number(income-expense)*-1
+   }else{ 
+    amountTotal.innerHTML = income - expense;
+   }
+
+
+   
 }
 
 
@@ -108,7 +115,7 @@ function load(){
     displayTable();
   } 
   else{
-    transactions=[]
+    transactions=[];
   }
 
 }
